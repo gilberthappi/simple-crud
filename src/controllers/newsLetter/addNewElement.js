@@ -1,15 +1,3 @@
-/* eslint-disable no-console */ /* eslint-disable import/extensions */
-/* eslint-disable import/prefer-default-export */
-// const database = require('../../../Utils/mockDatabase.js');
-
-// function createOne(req, res) {
-//   const newElement = req.body;
-//   database.push(newElement);
-//   res.json(newElement);
-// }
-
-// module.exports = createOne;
-
 import { NewsLetter } from '../../models';
 
 export const createOne = async (req, res) => {
@@ -22,8 +10,4 @@ export const createOne = async (req, res) => {
       message: error.message,
     });
   }
-
-  res.status(201).json({
-    message: 'New element created',
-  });
 };

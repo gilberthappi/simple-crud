@@ -1,7 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable import/extensions */
-/* eslint-disable import/prefer-default-export */
-// /* eslint-disable radix */
 // const database = require('../../../Utils/mockDatabase.js');
 
 // function getOneLetter(req, res) {

@@ -1,7 +1,3 @@
-/* eslint-disable consistent-return */
-/* eslint-disable no-console */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable import/extensions */
 // /* eslint-disable radix */
 // const database = require('../../../Utils/mockDatabase.js');
 
@@ -28,7 +24,7 @@ import { NewsLetter } from '../../models';
 export const updatePartially = async (req, res) => {
   try {
     const { id } = req.params;
-    const data = await NewsLetter.findOneAndUpdate(id, req.body);
+    const data = await NewsLetter.findByIdAndUpdate(id, req.body);
     if (!data) {
       return res.status(404).json({
         message: `can not find any product with ID ${id}`,

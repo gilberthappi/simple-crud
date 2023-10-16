@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 export * from './addNewElement';
 export * from './getAllElements';
 export * from './getOneElement';
@@ -8,3 +7,4 @@ export * from './findOne';
 export * from './findMany';
 export * from './deleteMany';
 export * from './updatePartOfElement';
+export * from './addMany';

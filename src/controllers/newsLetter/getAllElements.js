@@ -1,6 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable import/extensions */
 // const database = require('../../../Utils/mockDatabase.js');
 
 // function getAll(req, res) {

@@ -1,9 +1,3 @@
-/* eslint-disable consistent-return */
-/* eslint-disable no-console */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable import/extensions */
-// /* eslint-disable no-console */
-// /* eslint-disable radix */
 // const database = require('../../../Utils/mockDatabase.js');
 
 // function updateElement(req, res) {

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable import/extensions */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
@@ -119,28 +120,32 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
-import { myLogger } from './src/middleware';
 
 // import appRouter from './src/routes';
 import mainRouter from './src/routes';
+// import { myLogger } from './src/middleware';
+// import 'dotenv/config';
+require('dotenv').config();
 
 const app = express();
 
-app.use(myLogger);
+// app.use(myLogger);
 app.use(bodyParser.json());
 // app.use(express.urlencoded({ extended: false }));
 app.use('/api/v1', mainRouter);
 
-const PORT = 1500;
+const port = process.env.PORT || 6000;
 
 const DB_CONNECTION_PROD = 'mongodb+srv://gdushimimana6:happi1234@cluster0.rpvr4bu.mongodb.net/?retryWrites=true&w=majority';
-// const data = 'mongodb+srv://gdushimimana6:happi1234@cluster0.rpvr4bu.mongodb.net/?retryWrites=true&w=majority';
-const DB_CONNECTION_DEV = 'mongodb://localhost:27017/';
+// // const data = 'mongodb+srv://gdushimimana6:happi1234@cluster0.rpvr4bu.mongodb.net/?retryWrites=true&w=majority';
+// const DB_CONNECTION_DEV = 'mongodb://localhost:27017/';
+// const data = process.env.DB_CONNECTION_PROD;
+// console.log(data);
 
-mongoose.connect(DB_CONNECTION_PROD).then((res) => {
+mongoose.connect(process.env.DB_CONNECTION_PROD).then((res) => {
   console.log('Database is connected');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server is Running on http://localhost:${PORT}`);
+app.listen(port, () => {
+  console.log(`Server is Running on http://localhost:${port}`);
 });

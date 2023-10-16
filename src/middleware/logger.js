@@ -11,6 +11,7 @@
 // module.exports = myLogger;
 
 export const myLogger = function (req, res, next) {
+  console.log('from logger');
   console.log(req.body);
   next();
 };

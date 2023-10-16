@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import express from 'express';
 import authRouter from './authentication';
 import newsLetterRouter from './newsLetter';

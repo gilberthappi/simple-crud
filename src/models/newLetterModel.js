@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable import/no-extraneous-dependencies */
 import mongoose from 'mongoose';
 
 const newsLetterSchema = mongoose.Schema({

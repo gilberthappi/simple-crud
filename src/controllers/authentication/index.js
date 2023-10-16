@@ -1,2 +1,5 @@
 /* eslint-disable import/extensions */
-export * from './getAuth';
+/* eslint-disable import/export */
+export * from './login';
+export * from './signup';
+export * from './changePassword';

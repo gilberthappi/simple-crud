@@ -1,2 +1,2 @@
-/* eslint-disable import/extensions */
 export * from './newLetterModel';
+export * from './userModel';

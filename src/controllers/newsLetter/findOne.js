@@ -1,12 +1,8 @@
-/* eslint-disable consistent-return */
-/* eslint-disable no-console */
-/* eslint-disable import/prefer-default-export */
-/* eslint-disable import/extensions */
 import { NewsLetter } from '../../models';
 
 export const findOne = async (req, res) => {
   try {
-    const data = await NewsLetter.findMany({ title: req.params.title });
+    const data = await NewsLetter.findOne({ title: req.params.title });
     if (!data) {
       return res.status(404).json({ message: 'not found' });
     }
